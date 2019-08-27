@@ -15,10 +15,11 @@ module.exports = {
 				test: /fake.txt$/,
 				use: [
 					'html-loader',
+					'extract-loader',
 					{
 						loader: 'twing-loader',
 						options: {
-							environmentModulePath: 'twingEnv.js',
+							environmentModulePath: path.resolve('twingEnv.js'),
 							renderContext: {
 								foo: 'bar'
 							}
